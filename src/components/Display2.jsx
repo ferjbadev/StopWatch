@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-export default function Display2({ totalTimer, isRunning, onTimerFinish }) {
+export default function Display2({ totalTimer, isRunning, onTimerFinish, stopTimer, continueTimer }) {
     const [timeLeft, setTimeLeft] = useState(totalTimer);
 
     useEffect(() => {
@@ -11,6 +11,7 @@ export default function Display2({ totalTimer, isRunning, onTimerFinish }) {
 
             return () => clearInterval(interval);
         } else if (timeLeft === 0) {
+            alert('Time is done!');
             onTimerFinish(); // Llama la función cuando termina el temporizador
         }
     }, [isRunning, timeLeft, onTimerFinish]);
@@ -29,6 +30,10 @@ export default function Display2({ totalTimer, isRunning, onTimerFinish }) {
             ) : (
                 <h1 className="text-4xl font-bold">00:00:00</h1>
             )}
+
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-10" onClick={onTimerFinish}>Back</button>
+            <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-10" onClick={stopTimer}>Stop</button>
+            <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-10" onClick={continueTimer}>Resume</button>
         </div>
     );
 }
