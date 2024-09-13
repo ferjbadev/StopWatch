@@ -1,9 +1,12 @@
 body {
-  background-color: #f5f5f5;
-  padding: 2rem;
+  background-color: rgb(244, 242, 246);
 }
 
+/* Contenedor de los selectores */
 .centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 30px;
   position: absolute;
   top: 50%;
@@ -12,8 +15,104 @@ body {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 80px;
+  box-shadow: 0 0 15px 15px rgba(201, 109, 52, 0.648);
   width: 800px; 
   height: 400px; 
 }
+
+/* Boton de start */
+.btn {
+  font-size: 30px;
+  background-color: rgb(30, 138, 227);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(201, 109, 52, 0.648);
+}
+
+.btn:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  transform: scaleX(1.2) scaleY(1.2);
+}
+
+/* Selectores de tiempo */
+.selector {
+  font-size: 50px;
+  padding: 10px 20px;
+  border-radius: 12px;
+  text-align: center;
+  border-width: 2px;
+  width: 100%;
+  height: 100%;
+  border-color: #cccccc;
+  outline: none;
+  box-shadow: 0 0 0 2px #007bff;
+  transition: all 0.4s ease;
+}
+
+.selector:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #007bff, 0 0 0 4px #ffffff;
+  background-color: aliceblue;
+  color: #ff4500
+}
+
+/* Div de los labels */
+.label {
+  margin-bottom: 14px;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+
+/* Div principal */
+.counter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f9f9f9;
+  border-radius: 80px;
+  box-shadow: 15px 15px 10px rgba(201, 109, 52, 0.648);
+  width: 800px; 
+  height: 400px; 
+}
+
+/* Contador de la cuenta regresiva */
+.coundown {
+  display: flex;
+  justify-content: center;
+  margin: 10%;
+  color: black;
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+/* Contenedor de los botones */
+.column {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+} 
+
+/* Botones */
+.botons {
+  font-size: 30px;
+  display: flex;
+  color: black;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.botons:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  transform: scaleX(1.2) scaleY(1.2);
+}
+

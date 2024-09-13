@@ -11,7 +11,7 @@ export default function Display2({ totalTimer, isRunning, onTimerFinish, stopTim
 
             return () => clearInterval(interval);
         } else if (timeLeft === 0) {
-            alert('Time is done!');
+            alert('Time is Over!!');
             onTimerFinish(); // Llama la función cuando termina el temporizador
         }
     }, [isRunning, timeLeft, onTimerFinish]);
@@ -24,16 +24,17 @@ export default function Display2({ totalTimer, isRunning, onTimerFinish, stopTim
     };
 
     return (
-        <div className="mt-10 text-center">
+        <div className="counter">
             {timeLeft > 0 ? (
-                <h1 className="text-4xl font-bold">{formatTime(timeLeft)}</h1>
+                <h1 className="coundown">{formatTime(timeLeft)}</h1>
             ) : (
-                <h1 className="text-4xl font-bold">00:00:00</h1>
+                <h1 className="coundown">00:00:00</h1>
             )}
-
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-10" onClick={onTimerFinish}>Back</button>
-            <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-10" onClick={stopTimer}>Stop</button>
-            <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-10" onClick={continueTimer}>Resume</button>
-        </div>
+            <div className="column">
+                <button style={{ backgroundColor: '#007bff' }} className="botons" onClick={onTimerFinish}>Back</button>
+                <button style={{ backgroundColor: 'red' }} className="botons" onClick={stopTimer}>Stop</button>
+                <button style={{ backgroundColor: 'green' }} className="botons" onClick={continueTimer}>Resume</button>
+            </div>
+        </div >
     );
 }
