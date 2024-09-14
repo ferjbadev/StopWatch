@@ -25,19 +25,17 @@ export default function TimerApp() {
         }
     };
 
-    // Funcion para detener el temporizador
-    const stopTimer = () => {
-        // Notifica que el tiempo ha terminado
+    const toggleTimer = () => {
+    if (isRunning) {
+        // Si está corriendo, lo pausamos
         ToastNotifications.notifyStop();
-        // Detiene el temporizador
         setIsRunning(false);
-    };
-
-    // Funcion para continuar el temporizador
-    const continueTimer = () => {
-        ToastNotifications.notifyResume();   // Notifica la continuación del temporizador         
-        setIsRunning(true); // Continua el temporizador
-    };
+    } else {
+        // Si está detenido, lo reanudamos
+        ToastNotifications.notifyResume();
+        setIsRunning(true);
+    }
+};
 
     // Funcion para alternar la música
     const toggleMusic = () => {
@@ -67,8 +65,7 @@ export default function TimerApp() {
                     totalTimer={totalTimer}
                     isRunning={isRunning}
                     onTimerFinish={TimerFinish}
-                    stopTimer={stopTimer}
-                    continueTimer={continueTimer}
+                    toggleTimer={toggleTimer}
                     toggleMusic={toggleMusic}
                     isPlaying={isPlaying}
                 />

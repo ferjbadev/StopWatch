@@ -59,7 +59,7 @@
   height: 100%;
   border-color: #cccccc;
   outline: none;
-  box-shadow: 0 0 0 2px #007bff;
+  box-shadow: black;
   transition: all 0.4s ease;
 }
 
@@ -67,7 +67,7 @@
   outline: none;
   box-shadow: 0 0 0 2px #007bff, 0 0 0 4px #ffffff;
   background-color: aliceblue;
-  color: #ff4500
+  color: #0015ff
 }
 
 /* Div de los labels */
@@ -112,14 +112,13 @@
 
 /* Botones */
 .botons {
-  font-size: 30px;
-  display: flex;
-  color: black;
-  font-weight: bold;
+  font-size: var(--font-size-large);
+  background-color: var(--primary-color);
+  color: white;
   padding: 10px 20px;
-  border-radius: 12px;
+  border-radius: var(--border-radius);
   cursor: pointer;
-  justify-content: space-between;
+  box-shadow: 0 0 10px var(--box-shadow-color);
 }
 
 .botons:hover {
@@ -127,3 +126,18 @@
   transform: scaleX(1.2) scaleY(1.2);
 }
 
+
+.toggleBoton {
+  font-size: var(--font-size-large);
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--box-shadow-color);
+}
+
+.toggleBoton:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  transform: scaleX(1.2) scaleY(1.2);
+}

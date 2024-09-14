@@ -4,8 +4,7 @@ export default function Display2({
     totalTimer,
     isRunning,
     onTimerFinish,
-    stopTimer,
-    continueTimer,
+    toggleTimer,
     toggleMusic,
     isPlaying
 }) {
@@ -35,16 +34,15 @@ export default function Display2({
     const TimerControls = () => (
         <div className="column">
             <button style={{ backgroundColor: '#007bff' }} className="botons" onClick={onTimerFinish}>
-                Back
+                Delele
             </button>
-            <button style={{ backgroundColor: 'red' }} className="botons" onClick={stopTimer}>
-                Stop
+
+            <button onClick={toggleTimer} className={`toggleBoton ${isRunning ? 'bg-red-500' : 'bg-green-500'}`}>
+                {isRunning ? 'Pause' : 'Resume'}
             </button>
-            <button style={{ backgroundColor: 'green' }} className="botons" onClick={continueTimer}>
-                Resume
-            </button>
+
             <button style={{ backgroundColor: 'purple' }} className="botons" onClick={toggleMusic}>
-                {isPlaying ? 'Pause' : 'Sound'}
+                {isPlaying ? 'Unmute' : 'Mute'}     
             </button>
         </div>
     );

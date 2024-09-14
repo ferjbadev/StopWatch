@@ -82,6 +82,6 @@ export const ToastNotifications = {
             padding: '16px',
             color: '#ffffff',
             background: '#4CAF50',
-        },
+        }
     }),
 }
