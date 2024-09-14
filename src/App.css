@@ -1,10 +1,18 @@
-body {
-  background-color: rgb(244, 242, 246);
+
+:root {
+  --primary-color: rgb(30, 138, 227);
+  --secondary-color: #f9f9f9;
+  --border-radius: 12px;
+  --box-shadow-color: rgba(201, 109, 52, 0.648);
+  --font-size-large: 30px;
+  --font-size-extra-large: 50px;
 }
+
 
 /* Contenedor de los selectores */
 .centered {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 30px;
@@ -23,13 +31,13 @@ body {
 
 /* Boton de start */
 .btn {
-  font-size: 30px;
-  background-color: rgb(30, 138, 227);
+  font-size: var(--font-size-large);
+  background-color: var(--primary-color);
   color: white;
   padding: 10px 20px;
-  border-radius: 12px;
+  border-radius: var(--border-radius);
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(201, 109, 52, 0.648);
+  box-shadow: 0 0 10px var(--box-shadow-color);
 }
 
 .btn:hover {
@@ -39,8 +47,11 @@ body {
 
 /* Selectores de tiempo */
 .selector {
+  font-size: var(--font-size-extra-large);
+  padding: 10px;
+  border-radius: var(--border-radius);
   font-size: 50px;
-  padding: 10px 20px;
+  padding: 10px;
   border-radius: 12px;
   text-align: center;
   border-width: 2px;
