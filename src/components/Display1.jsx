@@ -1,18 +1,19 @@
 import { useState } from 'react';
-import toast,{ Toaster } from 'react-hot-toast';
 import { ToastNotifications } from './ToastNotifications';
-
-
+    
 // Display1 que muestra el selector de tiempo y un botón de inicio
 export default function Display1({ startTimer }) {
     const [hours, setHours] = useState(0);
     const [minutes, setMinutes] = useState(0);   
-    const [seconds, setSeconds] = useState(0);   
+    const [seconds, setSeconds] = useState(0);
+    
     
     // Para iniciar el temporizador
     const handleStart = () => {
+    console.log("Iniciando el contador");
     const totalSeconds = hours * 3600 + minutes * 60 + seconds;
     if (totalSeconds <= 0) {
+        console.log("Notificando de un error, si segundos <= 0");
         ToastNotifications.notifyError(); // Muestra el toast de error solo una vez
         return;
     }
@@ -88,7 +89,6 @@ export default function Display1({ startTimer }) {
             <button onClick={handleStart} className="btn">
                 Start
             </button>
-            <Toaster />
         </div>
     );
 }

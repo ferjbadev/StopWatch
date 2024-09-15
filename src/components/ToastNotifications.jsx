@@ -26,6 +26,18 @@ export const ToastNotifications = {
     }),
 
     // Notificacion para parar el temporizador
+    notifyStop: () => toast('The counter has ', {
+        duration: 3000,
+        style: {
+            fontSize: '24px',
+            fontWeight: 'bold',
+            padding: '16px',
+            color: '#ffffff',
+            background: '#cc0d20',
+        }
+    }),
+    
+    // Notificacion para parar el temporizador
     notifyStop: () => toast.error('The time is Stopped', {
         duration: 3000,
         style: {
@@ -83,5 +95,6 @@ export const ToastNotifications = {
             color: '#ffffff',
             background: '#4CAF50',
         }
-    }),
+    })
+
 }

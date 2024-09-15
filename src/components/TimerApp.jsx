@@ -19,10 +19,7 @@ export default function TimerApp() {
             setTotalTimer(timeSelected);
             setIsRunning(true); //Indica que el temporizador se esta ejecutando
             setShowDisplay2(true); // Muestra el display 2
-        } else {
-            // Notifica que no se ha seleccionado una hora válida
-            ToastNotifications.notifyStop('Please select a valid Time!');
-        }
+        }; 
     };
 
     const toggleTimer = () => {
@@ -58,9 +55,9 @@ export default function TimerApp() {
 
     return (
         <div className="timer-app">
-            {!showDisplay2 ? ( // Muestra el display 1 si showDisplay2 es falso
+            {!showDisplay2 ? ( // Muestra el display 1 si el showDisplay2 es falso
                 <Display1 startTimer={startTimer} /> 
-            ) : ( //Muestra el display 2 si showDisplay2 es verdadero
+            ) : ( //Muestra el display 2 si es verdadero 
                 <Display2
                     totalTimer={totalTimer}
                     isRunning={isRunning}
@@ -69,7 +66,7 @@ export default function TimerApp() {
                     toggleMusic={toggleMusic}
                     isPlaying={isPlaying}
                 />
-            )}
+            )}                  
             <Toaster />
         </div>
     );
