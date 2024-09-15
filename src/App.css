@@ -1,14 +1,4 @@
 
-:root {
-  --primary-color: rgb(30, 138, 227);
-  --secondary-color: #f9f9f9;
-  --border-radius: 12px;
-  --box-shadow-color: rgba(201, 109, 52, 0.648);
-  --font-size-large: 30px;
-  --font-size-extra-large: 50px;
-}
-
-
 /* Contenedor de los selectores */
 .centered {
   display: flex;
@@ -20,29 +10,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 80px;
-  box-shadow: 0 0 15px 15px rgba(201, 109, 52, 0.648);
   width: 800px; 
   height: 400px; 
-}
-
-/* Boton de start */
-.btn {
-  font-size: var(--font-size-large);
-  background-color: var(--primary-color);
-  color: white;
-  padding: 10px 20px;
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  box-shadow: 0 0 10px var(--box-shadow-color);
-}
-
-.btn:hover {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  transform: scaleX(1.2) scaleY(1.2);
 }
 
 /* Selectores de tiempo */
@@ -72,12 +41,12 @@
 
 /* Div de los labels */
 .label {
-  margin-bottom: 14px;
-  font-size: 30px;
+  margin-bottom: 1rem;
+  font-size: 2rem;
   text-align: center;
   font-weight: bold;
   text-decoration: underline;
-  text-decoration-color: black;
+  text-decoration-color: #F5F6FA;
 }
 
 /* Div principal */
@@ -86,9 +55,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #f9f9f9;
+  background-color: #F5F6FA;
   border-radius: 80px;
-  box-shadow: 15px 15px 10px rgba(201, 109, 52, 0.648);
+  box-shadow: 6px 8px 12px oklch(var(--s));
   width: 800px; 
   height: 400px; 
 }
@@ -98,7 +67,7 @@
   display: flex;
   justify-content: center;
   margin: 10%;
-  color: black;
+  color: oklch(var(--b3));
   font-size: 5rem;
   font-weight: bold;
 }
@@ -109,35 +78,3 @@
   justify-content: center;
   gap: 40px;
 } 
-
-/* Botones */
-.botons {
-  font-size: var(--font-size-large);
-  background-color: var(--primary-color);
-  color: white;
-  padding: 10px 20px;
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  box-shadow: 0 0 10px var(--box-shadow-color);
-}
-
-.botons:hover {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  transform: scaleX(1.2) scaleY(1.2);
-}
-
-
-.toggleBoton {
-  font-size: var(--font-size-large);
-  background-color: var(--primary-color);
-  color: white;
-  padding: 10px 20px;
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  box-shadow: 0 0 10px var(--box-shadow-color);
-}
-
-.toggleBoton:hover {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  transform: scaleX(1.2) scaleY(1.2);
-}

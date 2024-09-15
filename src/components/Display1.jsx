@@ -24,9 +24,9 @@ export default function Display1({ startTimer }) {
     // Div para los selectores de tiempo
     return (
         // Contenedor de las horas
-        <div className="space-y-20 centered ">
+        <div className="space-y-20 border shadow-xl rounded-[4rem] centered ">
             <div className="flex space-x-20"> 
-                <div className="">
+                <div className="text-center flex flex-col justify-center items-center">
                     <label className="label">Hours: </label>
                     <div className="h-24 w-24">
                         <input
@@ -46,12 +46,12 @@ export default function Display1({ startTimer }) {
                 </div>
 
                 {/* //Contenedor de los minutos */}
-                <div className="">
+                <div className="text-center flex flex-col justify-center items-center">
                     <label className="label">Minutes: </label>
                     <div className="h-24 w-24">
                         <input
                             type="number"
-                            className="selector"
+                            className="selector mx-auto"
                             value={minutes.toString().padStart(2, '0')}
                             onChange={(e) => {
                                 let returnValue = Number(e.target.value);
@@ -66,12 +66,12 @@ export default function Display1({ startTimer }) {
                 </div>
 
                 {/* //Contenedor de los segundos */}
-                <div className="">
+                <div className="text-center flex flex-col justify-center items-center">
                     <label className="label">Seconds: </label>
                     <div className="h-24 w-24">
                         <input
                             type="number"
-                            className="selector"
+                            className="selector mx-auto"
                             value={seconds.toString().padStart(2, '0')}
                             onChange={(e) => {
                                 let returnValue = Number(e.target.value);
@@ -86,7 +86,7 @@ export default function Display1({ startTimer }) {
                 </div>
             </div>
             {/* Boton de inicio */}
-            <button onClick={handleStart} className="btn">
+            <button onClick={handleStart} className="btn btn-outline btn-success btn-lg !text-3xl px-10">
                 Start
             </button>
         </div>

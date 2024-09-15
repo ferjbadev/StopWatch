@@ -33,16 +33,16 @@ export default function Display2({
     // Botones de las funciones 
     const TimerControls = () => (
         <div className="column">
-            <button style={{ backgroundColor: '#007bff' }} className="botons" onClick={onTimerFinish}>
-                Delele
+            <button className="btn btn-error btn-lg" onClick={onTimerFinish}>
+                Delete
             </button>
 
-            <button onClick={toggleTimer} className={`toggleBoton ${isRunning ? 'bg-red-500' : 'bg-green-500'}`}>
+            <button onClick={toggleTimer} className={`btn btn-lg ${isRunning ? ' btn-secondary' : 'btn-outline btn-info'}`} >
                 {isRunning ? 'Pause' : 'Resume'}
             </button>
 
-            <button style={{ backgroundColor: 'purple' }} className="botons" onClick={toggleMusic}>
-                {isPlaying ? 'Unmute' : 'Mute'}     
+            <button className={`btn btn-outline btn-lg ${isPlaying ? 'btn-error' : ' btn-info'}`} onClick={toggleMusic} >
+                {isPlaying ? 'Mute' : 'Unmute'}     
             </button>
         </div>
     );
