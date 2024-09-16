@@ -41,15 +41,15 @@ export default function Display1({ startTimer }) {
     };
 
     return (
-        <div className="space-y-20 border shadow-xl rounded-[4rem] centered ">
-            <div className="flex space-x-20">
+        <div className="space-y-20 border shadow-xl rounded-[2rem] p-6 sm:p-10 sm:space-y-10 md:rounded-[4rem] centered max-w-md mx-auto">
+            <div className="flex space-x-10 sm:space-x-16 justify-center">
                 {/* Contenedor de las horas */}
                 <div className="text-center flex flex-col justify-center items-center">
-                    <label className="label">Hours: </label>
-                    <div className="h-24 w-24">
+                    <label className="label text-lg sm:text-2xl">Hours: </label>
+                    <div className="h-16 w-16 sm:h-24 sm:w-24">
                         <input
-                            type="number"
-                            className="selector"
+                            type="tel"
+                            className="selector w-full text-center"
                             value={hours.toString().padStart(2, '0')}
                             onChange={(e) => {
                                 let returnValue = Number(e.target.value);
@@ -67,11 +67,11 @@ export default function Display1({ startTimer }) {
 
                 {/* Contenedor de los minutos */}
                 <div className="text-center flex flex-col justify-center items-center">
-                    <label className="label">Minutes: </label>
-                    <div className="h-24 w-24">
+                    <label className="label text-lg sm:text-2xl">Minutes: </label>
+                    <div className="h-16 w-16 sm:h-24 sm:w-24">
                         <input
-                            type="number"
-                            className="selector mx-auto"
+                            type="tel"
+                            className="selector w-full text-center"
                             value={minutes.toString().padStart(2, '0')}
                             onChange={(e) => {
                                 let returnValue = Number(e.target.value);
@@ -89,11 +89,11 @@ export default function Display1({ startTimer }) {
 
                 {/* Contenedor de los segundos */}
                 <div className="text-center flex flex-col justify-center items-center">
-                    <label className="label">Seconds: </label>
-                    <div className="h-24 w-24">
+                    <label className="label text-lg sm:text-2xl">Seconds: </label>
+                    <div className="h-16 w-16 sm:h-24 sm:w-24">
                         <input
-                            type="number"
-                            className="selector mx-auto"
+                            type="tel"
+                            className="selector w-full text-center"
                             value={seconds.toString().padStart(2, '0')}
                             onChange={(e) => {
                                 let returnValue = Number(e.target.value);
@@ -110,10 +110,12 @@ export default function Display1({ startTimer }) {
                 </div>
             </div>
 
-            {/* Boton de inicio */}
-            <button onClick={handleStart} className="btn btn-outline btn-success btn-lg !text-3xl px-10">
+            {/* Botón de inicio */}
+            <button
+                onClick={handleStart}
+                className="btn btn-outline btn-success btn-lg !text-xl sm:!text-3xl px-8 sm:px-10 w-full sm:w-auto">
                 Start
             </button>
         </div>
-    );
+    )
 }
